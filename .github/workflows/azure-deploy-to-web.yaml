@@ -1,8 +1,8 @@
 name: Build and Deploy to Azure Web App
 
 on:
-  push:
-    branches: [main]
+  #push:
+  #  branches: [main]
   workflow_dispatch:
 
 env:
@@ -11,7 +11,10 @@ env:
 
 jobs:
   buildanddeploytoweb:
-    runs-on: ubuntu-latest
+    #runs-on: runs-on: ubuntu-26.04
+
+    runs-on: self-hosted
+
 
     steps:
       - uses: actions/checkout@v4
